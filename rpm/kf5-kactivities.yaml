@@ -1,0 +1,101 @@
+Name         : kf5-kactivities
+Version      : 4.99.0
+Release      : 1
+Group        : System/Base
+License      : GPLv2+
+Summary      : A KDE Frameworks 5 Tier 3 runtime and library to organize the user work in separate activitie
+Description  : |
+  A KDE Frameworks 5 Tier 3 runtime and library to organize the user work in separate activitie
+URL          : http://www.kde.org
+SetupOptions : -q -n %{name}-%{version}/upstream
+
+Sources:
+    - "%{name}-%{version}.tar.xz"
+
+RpmLintIgnore:
+    - devel-file-in-non-devel-package
+    - no-changelogname-tag
+    - library-without-ldconfig-postin
+    - library-without-ldconfig-postun
+
+Configure    : none
+Builder      : none
+
+PkgBR:
+    - kf5-rpm-macros
+    - extra-cmake-modules
+    - qt5-tools
+    - kf5-umbrella
+    - kf5-kconfig-devel
+    - kf5-kcoreaddons-devel
+    - kf5-ki18n-devel
+    - kf5-kservice-devel
+    - kf5-kwindowsystem-devel
+    - kf5-kdbusaddons-devel
+    - kf5-kconfig-devel
+    - kf5-kjs-devel
+PkgConfigBR:
+    - Qt5Core
+    - Qt5DBus
+    - Qt5Xml
+    - Qt5Network
+    - Qt5Gui
+    - Qt5Widgets
+    - Qt5Concurrent
+    - Qt5Test
+Requires:
+    - kf5-filesystem
+    - kf5-kactivities-libs%{?_isa} = %{version}-%{release}
+    - kf5-kactivities-runtime%{?_isa} = %{version}-%{release}
+
+RequiresPost:
+    - /sbin/ldconfig
+RequiresPostUn:
+    - /sbin/ldconfig
+
+Files:
+    - "%doc README README.md README.packagers README.developers MAINTAINER"
+
+SubPackages:
+    - Name: libs
+      Group: System/Libraries
+      Summary: Libraries fro KActivities framework
+      Description: libs
+      Requires:
+          - kf5-filesystem
+      Files:
+          - "%{_kf5_libdir}/libKF5Activities.so.*"
+          - "%{_kf5_qmldir}/org/kde/activities/"
+    - Name: libs-devel
+      Group: Development/Libraries
+      Summary: Developer files for %{name}-libs
+      Description: |
+        The %{name}-devel package contains the files necessary to develop applications
+        that use %{name}.
+      Conflicts:
+          - kactivities-devel
+      Files:
+          - "%{_kf5_libdir}/libKF5Activities.so"
+          - "%{_kf5_libdir}/cmake/KF5Activities/"
+          - "%{_kf5_includedir}/KActivities/"
+          - "%{_kf5_includedir}/kactivities_version.h"
+          - "%{_kf5_libdir}/pkgconfig/libKActivities.pc"
+          - "%{_datadir}/qt5/mkspecs/modules/qt_KActivities.pri"
+    - Name: runtime
+      Group: System/Libraries
+      Summary: Runtime for KActivities framework
+      Description: |
+        The runtime module is a drop-in replacement for KActivities runtime module from
+        KDE 4 and can be safely used with KDE 4.
+      Conflicts:
+          - kactivities < 0:4.90.0
+      Provides:
+          - kactivities%{?_isa} = 0:%{version}-%{release}
+      Provides:
+          - kactivities = 0:%{version}-%{release}
+      Files:
+          - "%{_kf5_bindir}/kactivitymanagerd"
+          - "%{_kf5_datadir}/kservices5/kactivitymanagerd.desktop"
+          - "%{_kf5_datadir}/kservicetypes5/kactivitymanagerd-plugin.desktop"
+          - "%{_kf5_qtplugindir}/kf5/*"
+
