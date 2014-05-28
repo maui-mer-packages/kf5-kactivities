@@ -44,6 +44,7 @@ PkgConfigBR:
     - Qt5Concurrent
     - Qt5Test
     - Qt5Sql
+    - Qt5Qml
 Requires:
     - kf5-filesystem
     - kf5-kactivities-libs%{?_isa} = %{version}-%{release}
