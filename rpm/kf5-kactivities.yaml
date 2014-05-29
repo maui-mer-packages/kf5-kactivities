@@ -34,6 +34,7 @@ PkgBR:
     - kf5-kdbusaddons-devel
     - kf5-kconfig-devel
     - kf5-kjs-devel
+    - kf5-kio-devel
 PkgConfigBR:
     - Qt5Core
     - Qt5DBus
