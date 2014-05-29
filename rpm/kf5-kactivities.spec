@@ -136,6 +136,6 @@ rm -rf %{buildroot}
 %{_kf5_bindir}/kactivitymanagerd
 %{_kf5_datadir}/kservices5/kactivitymanagerd.desktop
 %{_kf5_datadir}/kservicetypes5/kactivitymanagerd-plugin.desktop
-%{_kf5_qtplugindir}/kf5/*
+%{_kf5_qtplugindir}/*
 # >> files runtime
 # << files runtime
