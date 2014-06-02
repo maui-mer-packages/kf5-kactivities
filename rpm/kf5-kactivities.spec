@@ -6,7 +6,7 @@
 # << macros
 
 Name:       kf5-kactivities
-Summary:    A KDE Frameworks 5 Tier 3 runtime and library to organize the user work in separate activitie
+Summary:    A KDE Frameworks 5 Tier 3 runtime and library to organize activities
 Version:    4.99.0
 Release:    1
 Group:      System/Base
@@ -47,7 +47,8 @@ BuildRequires:  boost-devel
 
 
 %description
-A KDE Frameworks 5 Tier 3 runtime and library to organize the user work in separate activitie
+A KDE Frameworks 5 Tier 3 API for using and interacting with Activities as a
+consumer, application adding information to them or as an activity manager.
 
 
 
