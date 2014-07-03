@@ -9,7 +9,7 @@ Name:       kf5-kactivities
 # << macros
 
 Summary:    A KDE Frameworks 5 Tier 3 runtime and library to organize activities
-Version:    4.100.0
+Version:    5.0.0
 Release:    1
 Group:      System/Base
 License:    GPLv2+
