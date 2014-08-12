@@ -63,7 +63,7 @@ Files:
 SubPackages:
     - Name: libs
       Group: System/Libraries
-      Summary: Libraries fro KActivities framework
+      Summary: Libraries from KActivities framework
       Description: libs
       Requires:
           - kf5-filesystem
@@ -76,8 +76,6 @@ SubPackages:
       Description: |
         The %{name}-devel package contains the files necessary to develop applications
         that use %{name}.
-      Conflicts:
-          - kactivities-devel
       Files:
           - "%{_kf5_libdir}/libKF5Activities.so"
           - "%{_kf5_cmakedir}/KF5Activities/"
@@ -91,12 +89,6 @@ SubPackages:
       Description: |
         The runtime module is a drop-in replacement for KActivities runtime module from
         KDE 4 and can be safely used with KDE 4.
-      Conflicts:
-          - kactivities < 0:4.90.0
-      Provides:
-          - kactivities%{?_isa} = 0:%{version}-%{release}
-      Provides:
-          - kactivities = 0:%{version}-%{release}
       Files:
           - "%{_kf5_bindir}/kactivitymanagerd"
           - "%{_kf5_servicesdir}/kactivitymanagerd.desktop"

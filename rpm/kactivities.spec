@@ -52,7 +52,7 @@ consumer, application adding information to them or as an activity manager.
 
 
 %package libs
-Summary:    Libraries fro KActivities framework
+Summary:    Libraries from KActivities framework
 Group:      System/Libraries
 Requires:   %{name} = %{version}-%{release}
 Requires:   kf5-filesystem
@@ -64,7 +64,6 @@ libs
 Summary:    Developer files for %{name}-libs
 Group:      Development/Libraries
 Requires:   %{name} = %{version}-%{release}
-Conflicts:  kactivities-devel
 
 %description libs-devel
 The %{name}-devel package contains the files necessary to develop applications
@@ -75,8 +74,6 @@ that use %{name}.
 Summary:    Runtime for KActivities framework
 Group:      System/Libraries
 Requires:   %{name} = %{version}-%{release}
-Provides:   kactivities = 0:%{version}-%{release}
-Conflicts:  kactivities < 0:4.90.0
 
 %description runtime
 The runtime module is a drop-in replacement for KActivities runtime module from
