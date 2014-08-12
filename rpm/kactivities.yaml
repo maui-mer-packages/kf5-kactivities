@@ -1,5 +1,5 @@
-Name         : kf5-kactivities
-Version      : 5.0.0
+Name         : kactivities
+Version      : 5.1.0
 Release      : 1
 Group        : System/Base
 License      : GPLv2+
@@ -26,16 +26,15 @@ PkgBR:
     - kf5-rpm-macros
     - extra-cmake-modules
     - qt5-tools
-    - kf5-umbrella
-    - kf5-kconfig-devel
-    - kf5-kcoreaddons-devel
-    - kf5-ki18n-devel
-    - kf5-kservice-devel
-    - kf5-kwindowsystem-devel
-    - kf5-kdbusaddons-devel
-    - kf5-kconfig-devel
-    - kf5-kjs-devel
-    - kf5-kio-devel
+    - kconfig-devel
+    - kcoreaddons-devel
+    - ki18n-devel
+    - kservice-devel
+    - kwindowsystem-devel
+    - kdbusaddons-devel
+    - kconfig-devel
+    - kjs-devel
+    - kio-devel
     - boost-devel
 PkgConfigBR:
     - Qt5Core
@@ -50,8 +49,8 @@ PkgConfigBR:
     - Qt5Qml
 Requires:
     - kf5-filesystem
-    - kf5-kactivities-libs%{?_isa} = %{version}-%{release}
-    - kf5-kactivities-runtime%{?_isa} = %{version}-%{release}
+    - kactivities-libs%{?_isa} = %{version}-%{release}
+    - kactivities-runtime%{?_isa} = %{version}-%{release}
 
 RequiresPost:
     - /sbin/ldconfig
@@ -81,11 +80,11 @@ SubPackages:
           - kactivities-devel
       Files:
           - "%{_kf5_libdir}/libKF5Activities.so"
-          - "%{_kf5_libdir}/cmake/KF5Activities/"
+          - "%{_kf5_cmakedir}/KF5Activities/"
           - "%{_kf5_includedir}/KActivities/"
           - "%{_kf5_includedir}/kactivities_version.h"
           - "%{_kf5_libdir}/pkgconfig/libKActivities.pc"
-          - "%{_datadir}/qt5/mkspecs/modules/qt_KActivities.pri"
+          - "%{_kf5_mkspecsdir}/qt_KActivities.pri"
     - Name: runtime
       Group: System/Libraries
       Summary: Runtime for KActivities framework
@@ -100,6 +99,6 @@ SubPackages:
           - kactivities = 0:%{version}-%{release}
       Files:
           - "%{_kf5_bindir}/kactivitymanagerd"
-          - "%{_kf5_datadir}/kservices5/kactivitymanagerd.desktop"
-          - "%{_kf5_datadir}/kservicetypes5/kactivitymanagerd-plugin.desktop"
-          - "%{_kf5_qtplugindir}/*"
+          - "%{_kf5_servicesdir}/kactivitymanagerd.desktop"
+          - "%{_kf5_servicetypesdir}/kactivitymanagerd-plugin.desktop"
+          - "%{_kf5_plugindir}/*"
