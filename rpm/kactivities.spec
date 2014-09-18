@@ -51,6 +51,7 @@ BuildRequires:  kconfig-devel
 BuildRequires:  kjs-devel
 BuildRequires:  kio-devel
 BuildRequires:  kdeclarative-devel
+BuildRequires:  kcmutils-devel
 BuildRequires:  boost-devel
 
 %description

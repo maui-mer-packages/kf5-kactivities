@@ -36,6 +36,7 @@ PkgBR:
     - kjs-devel
     - kio-devel
     - kdeclarative-devel
+    - kcmutils-devel
     - boost-devel
 PkgConfigBR:
     - Qt5Core
