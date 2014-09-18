@@ -151,7 +151,7 @@ rm -rf %{buildroot}
 %defattr(-,root,root,-)
 %{_kf5_bindir}/kactivitymanagerd
 %{_kf5_servicesdir}/kactivitymanagerd.desktop
-%{_kf5_servicesdir}/kactivitymanagerd-plugin-*.desktop
+%{_kf5_servicesdir}/kactivitymanagerd*.desktop
 %{_kf5_servicesdir}/activities.protocol
 %{_kf5_servicetypesdir}/kactivitymanagerd-plugin.desktop
 %{_kf5_plugindir}/*
