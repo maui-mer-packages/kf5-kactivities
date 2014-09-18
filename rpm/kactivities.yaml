@@ -78,6 +78,17 @@ SubPackages:
       Description: |
         The %{name}-devel package contains the files necessary to develop applications
         that use %{name}.
+      Requires:
+          - kconfig-devel
+          - kcoreaddons-devel
+          - ki18n-devel
+          - kservice-devel
+          - kwindowsystem-devel
+          - kdbusaddons-devel
+          - kconfig-devel
+          - kjs-devel
+          - kio-devel
+          - kdeclarative-devel
       Files:
           - "%{_kf5_libdir}/libKF5Activities.so"
           - "%{_kf5_cmakedir}/KF5Activities/"

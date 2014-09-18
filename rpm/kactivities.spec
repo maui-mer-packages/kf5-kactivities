@@ -72,6 +72,16 @@ libs
 Summary:    Developer files for %{name}-libs
 Group:      Development/Libraries
 Requires:   %{name} = %{version}-%{release}
+Requires:   kconfig-devel
+Requires:   kcoreaddons-devel
+Requires:   ki18n-devel
+Requires:   kservice-devel
+Requires:   kwindowsystem-devel
+Requires:   kdbusaddons-devel
+Requires:   kconfig-devel
+Requires:   kjs-devel
+Requires:   kio-devel
+Requires:   kdeclarative-devel
 
 %description libs-devel
 The %{name}-devel package contains the files necessary to develop applications
