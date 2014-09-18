@@ -50,6 +50,7 @@ BuildRequires:  kdbusaddons-devel
 BuildRequires:  kconfig-devel
 BuildRequires:  kjs-devel
 BuildRequires:  kio-devel
+BuildRequires:  kdeclarative-devel
 BuildRequires:  boost-devel
 
 %description
