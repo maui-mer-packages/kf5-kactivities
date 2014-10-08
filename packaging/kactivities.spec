@@ -8,12 +8,6 @@ Name:       kactivities
 # >> macros
 # << macros
 
-# >> bcond_with
-# << bcond_with
-
-# >> bcond_without
-# << bcond_without
-
 Summary:    A KDE Frameworks 5 Tier 3 runtime and library to organize activities
 Version:    5.2.0
 Release:    1
@@ -99,7 +93,7 @@ KDE 4 and can be safely used with KDE 4.
 
 
 %prep
-%setup -q -n %{name}-%{version}/upstream
+%setup -q -n %{name}-%{version}
 
 # >> setup
 # << setup
