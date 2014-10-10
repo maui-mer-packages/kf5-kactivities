@@ -117,7 +117,9 @@ rm -rf %{buildroot}
 # >> install post
 # << install post
 
-%files
+%find_lang kactivities5_qt --with-qt --all-name || :
+
+%files -f kactivities5_qt.lang
 %defattr(-,root,root,-)
 %doc README README.md README.packagers README.developers MAINTAINER
 # >> files

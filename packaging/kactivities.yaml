@@ -58,6 +58,9 @@ RequiresPost:
 RequiresPostUn:
     - /sbin/ldconfig
 
+LocaleName: kactivities5_qt
+LocaleOptions: "--with-qt --all-name || :"
+
 Files:
     - "%doc README README.md README.packagers README.developers MAINTAINER"
 
