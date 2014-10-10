@@ -10,7 +10,7 @@ Name:       kactivities
 
 Summary:    A KDE Frameworks 5 Tier 3 runtime and library to organize activities
 Version:    5.3.0
-Release:    1
+Release:    2
 Group:      System/Base
 License:    GPLv2+
 URL:        http://www.kde.org
